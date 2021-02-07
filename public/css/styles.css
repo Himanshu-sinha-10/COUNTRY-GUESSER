@@ -1,0 +1,31 @@
+
+.color{
+    background-color: #404040;
+    height:100%;
+}
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.col{
+    width:50%;
+    /* opacity: 0.7; */
+    
+}
+
+h1.display-4 , p.lead{
+    color: #FFFFFF;
+}
+
+form{
+    width:50%;
+}
+
+.name
+{
+    font-size: 50px;
+}

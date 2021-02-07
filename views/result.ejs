@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Guess The Country</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script>
+    <!-- Favicons -->
+    
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+   <div class="color">
+    <main class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Country Guess</h1>
+            <p class="lead"> Tadaaa!! <span class="name"><%=name %> </span> belongs to following countries</p>
+        </div>
+      
+         
+      
+     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <% for(var i=0; i<dataArray.length ;i++){ %>
+            <div class="col">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 fw-normal">Country Details</h4>
+                    </div>
+                    <div class="card-body">
+                        
+                       <h1 class="card-title pricing-card-title">Country Code: <small class="text-muted"><%= dataArray[i].country_id  %></small></h1>
+                   
+                    <h1 class="card-title pricing-card-title">Chances: <small class="text-muted">
+                            <%= (dataArray[i].probability*100).toFixed(2) %>%
+                        </small></h1>
+                    <a class="btn btn-secondary btn-lg" href="https://www.wikipedia.com" role="button">Learn More</a>
+                    </div>
+                </div>
+                
+            </div>
+
+     <% } %>
+
+    
+        
+    </div>
+
+    
+
+      
+    </main>
+    </div>
+
+
+
+</body>
+
+</html>
